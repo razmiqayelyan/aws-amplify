@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0d0d0d;
+    color: #0ff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: glow 1.5s infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #0ff, #00f);
+    border-radius: 10px;
+    position: relative;
+    animation: rotateScale 4s infinite alternate ease-in-out;
+}
+
+.animated-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    background: #0ff;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ff;
+}
+
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+    }
+    to {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #00f;
+    }
+}
